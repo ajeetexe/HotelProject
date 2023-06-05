@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("/static/img/peakpx.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    max-width: 100%;
+    margin: auto;
+}
+
+.container nav{
+    display: flex;
+    justify-content:space-around;
+    padding: 20px;
+    border-bottom: 2px lightblue solid;
+    background-color: white;
+}
+
+.menu-list{
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.menu-list li{
+    display: inline-block;
+    padding: 0.5em 1em;
+
+}
+.menu-list a{
+    text-decoration: none;
+    color: orangered;
+
+}
+.brand h1{
+    color: blueviolet;
+    font-weight: 900;
+}

@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/footer.css'%}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'UI/Header.html' with active='profile' %}
+    <div class="profile-container">
+        <div class="profile-detail">
+            <h1 class="h1-tag">Detail</h1>
+            <hr>
+            <table class="table-tag">
+                <tr>
+                    <th>First name: </th>
+                    <td>{{user_obj.first_name}}</td>
+                </tr>
+                <tr>
+                    <th>Last name: </th>
+                    <td>{{user_obj.last_name}}</td>
+                </tr>
+                <tr>
+                    <th>Phone: </th>
+                    <td>{{user_obj.phone}}</td>
+                </tr>
+                <tr>
+                    <th>Email: </th>
+                    <td>{{user_obj.email}}</td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td>{{user_obj.gender}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="profile-history">
+            <h1 class="h1-tag">History</h1>
+            <hr>
+            <table class="table-tag">
+                <tr>
+                    <th>#</th>
+                    <th>Email</th>
+                    <th>Check in</th>
+                    <th>Check out</th>
+                    <th></th>
+                </tr>
+                {% for x in book_obj %}
+                <tr>
+                    <th>{{forloop.counter}}</th>
+                    <td>{{x.email}}</td>
+                    <td>{{x.check_in}}</td>
+                    <td>{{x.check_out}}</td>
+                    <td><a href="{% url 'know-more' booking_id=x.booking_id %}">Know more</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+            
+        </div>
+    </div>
+    {% include 'UI/Footer.html' %}
+    
+</body>
+</html>

@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title> Hrooms.com </title>
+  <link rel="stylesheet" href="{% static 'css/project.css' %}">
+  <link rel="stylesheet" href="{% static 'css/messages.css' %}">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+{% include 'UI/modal.html' %}
+{% include 'UI/Header.html' with active='index' %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+  <div class="banner-content">
+    <div class="image-slider-box">
+      <div class="slide">
+        <img src="{% static 'img/home/slideshow/p1.jpg' %}" alt="" width="100%">
+      </div>
+      <div class="slide">
+        <img src="{% static 'img/home/slideshow/p2.jpg' %}" alt="" width="100%">
+      </div>
+      <div class="slide">
+        <img src="{% static 'img/home/slideshow/p3.jpg' %}" alt="" width="100%">
+      </div>
+      <div class="slide">
+        <img src="{% static 'img/home/slideshow/p4.jpg' %}" alt="" width="100%">
+      </div>
+      <div class="slide">
+        <img src="{% static 'img/home/slideshow/p5.jpg' %}" alt="" width="100%">
+      </div>
+      <div class="slide">
+        <img src="{% static 'img/home/slideshow/p6.jpg' %}" alt="" width="100%">
+      </div>
+    </div>
+    <div class="brand-title">
+      <h1>Welcome to Hroom</h1>
+      <h4>Stay once, carry memories forever</h4>
+    </div>
+  </div>
+
+  
+
+  <section class="book">
+    <div class="container_flex_space">
+      <form class="grid" action="" method="post">
+        {% csrf_token %}
+        <div class="book-form">
+          <label for="arival">Check In</label>
+          <input type="date" placeholder="Araival Date" name="arival" required>
+        </div>
+
+        <div class="book-form">
+          <label for="departure">Check Out</label>
+          <input type="date" placeholder="Departure Date" name="departure" required>
+        </div>
+        <!-- <div class="book-form">
+          <label for="adult">Adult</label>
+          <input type="number" placeholder="Adults" name="adult">
+        </div>
+        <div class="book-form">
+          <label for="childen">Children</label>
+          <input type="number" placeholder="Childern" name="children">
+        </div> -->
+        <div class="book-form">
+          <br>
+          <input name="avail" type="submit" value="CHECK AVAILABILITY">
+        </div>
+      </form>
+    </div>
+    </div>
+  </section>
+
+  <section class="padding-section">
+    <div class="container">
+      <div class="row">
+        <div class="section-subtitle">The luxury hotel</div>
+        <div class="section-title">Enjoy a Luxury Experience</div>
+        <p>Welcome to the best five-star deluxe hotel in New nagpur. Hotel element seuse the aucan vestibulum some just
+          <br>in the sapien rutrum volutpat. Until he wants the kids. Until he wants to put the bow on the blane.
+        </p>
+        <p>The hotel is a nesting place and not a hateful element. Orcs, born with feathers and large shoots, will give
+          birth<br> to a ridiculous mouse born on the mountain, and they will dwell in sickness
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="room-desc">
+    <div class="rooms">
+      <img class="room" src="{% static 'img/home/sample_room/r1.jpg' %}" alt="">
+      <div class="room room-detail">
+        <h1>Simple room</h1>
+        <h4>&#8377;2000/Day</h4>
+        <table>
+          <tr>
+            <td>Size</td>
+            <td>20ft</td>
+          </tr>
+          <tr>
+            <td>Bed</td>
+            <td>Normal Size</td>
+          </tr>
+          <tr>
+            <td>Services:</td>
+            <td>Television, Bathrooms</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="rooms">
+      <img class="room" src="{% static 'img/home/sample_room/r2.jpg' %}" alt="">
+      <div class="room room-detail">
+        <h1>Big room</h1>
+        <h4>&#8377;5000/Day</h4>
+        <table>
+          <tr>
+            <td>Size</td>
+            <td>30ft</td>
+          </tr>
+          <tr>
+            <td>Bed</td>
+            <td>Big Size</td>
+          </tr>
+          <tr>
+            <td>Services:</td>
+            <td>Wifi, Television, Bathrooms</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="rooms">
+      <img class="room" src="{% static 'img/home/sample_room/r3.jpg'%}" alt="">
+      <div class="room room-detail">
+        <h1>Premium room</h1>
+        <h4>&#8377;10000/Day</h4>
+        <table>
+          <tr>
+            <td>Size</td>
+            <td>30ft</td>
+          </tr>
+          <tr>
+            <td>Bed</td>
+            <td>Big Size</td>
+          </tr>
+          <tr>
+            <td>Services:</td>
+            <td>Wifi, Television, Bathrooms, Swimming pool</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <h2 class="content-title" style="text-align:center;">Gallery</h2>
+  <div class="sms" style="text-align:center;">Manicured rose and topiary gardens, scenic ponds and meandering
+    cobblestone pathways create an ambience that feels worlds apart from urban bustle and distractions, yet the hotel is
+    located
+    in the heart of Nagpur, BC, walking distance from downtown and the Inner Harbour. Please <a
+      href="{% url 'hotel'%}" target="_blank">view our image gallery</a> to learn more.
+    </div>
+
+  <div class="row-col">
+    <div class="column">
+      <img src="{% static 'img/home/galary/G1.jpg' %}" alt="Snow" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="{% static 'img/home/galary/G2.jpg' %}" alt="Forest" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="{% static 'img/home/galary/G3.jpg' %}" alt="Mountains" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="{% static 'img/home/galary/G4.jpg' %}" alt="Mountains" style="width:100%">
+    </div>
+  </div>
+
+  <div class="end-title">
+    <div class="sam" style="text-align:center;"><a href="{% url 'hotel' %}" target="_blank" style="text-decoration: none; color:white">View Gallery</a></div>
+  </div>
+
+
+
+
+
+
+  <div class="box-container">
+    <div class="imagebox">
+      <img  src="{% static 'img/home/A1.jpeg'%}" class="sankimg" alt="" loading="lazy">
+    </div>
+
+
+    <div class="imagebox2">
+      <div class="imgboxcontent2">
+        <h4 class="imgboxtitle2" align="center">About us</h4>
+        <p class="imgboxdis2" align="center">The Story Of The
+          Hrooms Hotel And Pendray Inn And
+          Tea House Is Just As Fascinating As That Of Victoria BC Itself.
+          <br> Learn more!
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="{% static 'js/project.js' %}"></script>
+</body>
+{% include 'UI/Footer.html' %}
+</html>

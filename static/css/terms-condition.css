@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a2c48;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: #fff;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  .policy {
+    margin-bottom: 20px;
+  }
+
+  .button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .button-container button:hover {
+    background-color: #45a049;
+  }
+  p1{
+    font-size: 12px;
+  }
+  

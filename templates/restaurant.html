@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/restaurant.css' %}" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    {% include 'UI/modal.html' %}
+    {% include 'UI/Header.html' with active='resta' %}
+
+    <div class="res-1">
+      <!--  -->
+      <div class="res-content">
+        <div class="slide">
+          <img src="{% static 'img/resta/res-1.jpg' %}" alt="" />
+        </div>
+
+        <div class="res-2">
+          <h1>
+            Afternoon Tea &<br />
+            ​Much More in Hrooms ​
+          </h1>
+          <h2>ENJOY AN ARRAY OF DINING EXPERIENCES AT HROOMS​</h2>
+        </div>
+
+        <div class="rest-box1">
+          <p>
+            From a hot breakfast at Pendray Inn and Tea House to one of the best
+            Afternoon Teas in Hrooms, guests of the<br />
+            Hrooms Hotel enjoy an array of dining experiences.
+          </p>
+        </div>
+      </div>
+      <!--  -->
+      <div class="res-3">
+        <div class="res-4">
+          <img src="{% static 'img/resta/res-1.jpg' %}" alt="" />
+        </div>
+
+        <div class="res-5">
+          <p>
+            <i
+              >Breakfast at Hrooms Hotel ​ OPEN DAILY: 7:00 A.M. - 11:00 A.M.<br />
+              ​Start your day on the right foot! A complimentary buffet
+              breakfast is offered in Hrooms</i
+            >
+          </p>
+          <form
+            action="{% static 'pdf/seemenucard.pdf' %}"
+            method="get"
+            target="_blank"
+          >
+            <button type="submit" value="Submit" id="submit-btn">
+              See Menu
+            </button>
+          </form>
+        </div>
+      </div>
+      <!--  -->
+      <div class="res-6">
+        <div class="res-7">
+          <div class="res-8">
+            <img src="{% static 'img/resta/tea.png' %}" />
+          </div>
+
+          <div class="res-9">
+            <p>
+              <i>
+                <b>Tea House AFTERNOON TEA</b><br />
+                MON-THU: 11:00 A.M. - 4:00 P.M.<br />
+                FRI-SUN: 11:00 A.M. - 6:00 P.M.<br />
+                LIFE IS MAKING TEA!<br />BOIL YUR EGO,<br />
+                EVAPORATE YOUR WORRIES,<br />DILUTE YOUR SORROWS,<br />FILTER
+                YOUR MISTAKES <br />& GET TASTE OF HAPPINESS</i
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="res-10">
+        <div class="res-11">
+          <img src="{% static 'img/resta/menucard.jpg' %}" />
+        </div>
+        <div class="res-12">
+          <p>
+            <i>
+              ​DAILY 8:00 A.M. - 8:00 P.M.<br />
+              Savour a taste of Old Nagpur at Hrooms Café, where you’ll dine on
+              authentic specialties paired with tasty margaritas or a selection
+              from the full bar. Stop by for Happy Hour food and drink specials
+              from 2:00 p.m. to 5:00 p.m.</i
+            >
+          </p>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+
+    {% include "UI/Footer.html" %}
+  </body>
+</html>

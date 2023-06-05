@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80vh;
+        width: 100%;
+      }
+      .content {
+        background-color: rgba(211, 211, 211, 0.2);
+        padding: 1rem;
+        border-radius: 5px;
+      }
+      .content table {
+        width: 100%;
+        text-transform: uppercase;
+        margin: 1rem;
+      }
+      .content th {
+        text-align: start;
+        padding: 0.5em;
+      }
+      .content td {
+        text-align: end;
+        padding: 0.5em;
+      }
+      .status {
+        color: rgb(8, 250, 8);
+      }
+      .cd{
+        font-style: italic;
+      }
+      #countdown{
+        font-style: normal;
+        font-weight: bolder;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Transaction Acknowledgment</h1>
+        <hr />
+        <table>
+          {% if status == 'success' %}
+          <tr>
+            <th>Payment status :</th>
+            <td class="status">{{status}}</td>
+          </tr>
+          {% else %}
+          <tr>
+            <th>Payment status :</th>
+            <td class="status">{{status}}</td>
+          </tr>
+          {% endif %}
+
+          <tr>
+            <th>Transaction ID :</th>
+            <td>{{pay_obj.payment_id}}</td>
+          </tr>
+          <tr>
+            <th>Booking ID :</th>
+            <td>{{book_obj.booking_id}}</td>
+          </tr>
+          <tr>
+            <th>Payment date :</th>
+            <td>{{pay_obj.payment_on}}</td>
+          </tr>
+          <tr>
+            <th>Initial cost</th>
+            <td>&#8377;{{room_obj.room_price}}</td>
+          </tr>
+          <tr>
+            <th>Number of People</th>
+            <td>{{book_obj.guests}}</td>
+          </tr>
+          <tr>
+            <th>Type of room</th>
+            <td>{{book_obj.room_type}}</td>
+          </tr>
+          <tr>
+            <th>Total Cost :</th>
+            <td>&#8377;{{cost}}</td>
+          </tr>
+        </table>
+        <a href="javascript:window.print()">Print this page</a>
+      </div>
+      <p>
+        Please quote your Transaction ID for any queries relating to this
+        request.
+      </p>
+      <h4 class="cd">This page redirect to home after <span id="countdown"></span> seconds</h4>
+    </div>
+
+    <script>
+      let t = 30;
+      countDown();
+      function countDown() {
+        if (t > 0) {
+          document.getElementById(
+            "countdown"
+          ).innerHTML = t;
+        } else {
+          document.location.href = "{% url 'index' %}";
+        }
+        t = t - 1;
+        setTimeout(countDown,1000)
+      }
+
+    </script>
+  </body>
+</html>

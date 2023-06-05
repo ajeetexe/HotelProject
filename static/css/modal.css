@@ -1,0 +1,101 @@
+.mail-query{
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+  background-color: lightblue;
+  padding: 1em;
+  border-radius: 100%;
+  transition: 1s;
+  opacity: 1;
+  
+}
+.mail-query button {
+ background-color: lightblue;
+ text-align: center;
+ line-height: 1em;
+ border: none;
+}
+.hide-mail-query{
+    right: -50%;
+    opacity: 0;
+}
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  opacity: 0;
+  transition: 1s;
+}
+.show-overlay{
+    z-index: 1;
+    opacity: 1;
+}
+
+.mail-query-box {
+    width: 400px;
+  background-color:white;
+  position: fixed;
+  left: 50%;
+  top: -50%;
+  transform: translate(-50%,-40%);
+  opacity: 0;
+  transition: 2s;
+  z-index: 9;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 3px #ccc;
+
+
+}
+
+.show-mail-query-box{
+    top:50%;
+    opacity: 1;
+}
+
+.mail-form{
+    padding: 0.5rem;
+}
+.mail-form input{
+    border: 1px gray solid;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-transform: none;
+
+}
+.mail-form textarea{
+    resize: none;
+    border: 1px gray solid;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-transform: none;
+
+}
+
+.close-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: red;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-align: center;
+    text-transform: lowercase;
+}
+.mail-form button{
+    position: absolute;
+    left: 50%;
+    bottom: 1%;
+    transform: translate(-50%);
+    padding: 1rem 2rem;
+    background-color: indigo;
+    color: white;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+

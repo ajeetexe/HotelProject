@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container table{
+            width: 80%;
+            padding: 1rem;
+            border: 1px indigo solid;
+            margin: 1rem;
+            border-radius: 5px;
+            background-color: lightseagreen;
+        }
+        .container th{
+            text-align: left;
+            padding: 0.5rem;
+            
+        }
+        .container td{
+            text-align: right;
+            padding: 0.5rem;
+            
+        }
+    </style>
+</head>
+<body>
+    {% include 'UI/Header.html' %}
+    <div class="container">
+        <h1>{{ book_obj.first_name }} {{book_obj.last_name}}</h1>
+        <table>
+            <tr>
+                <th>Booking Id:</th>
+                <td>{{book_obj.booking_id}}</td>
+            </tr>
+            <tr>
+                <th>Payment Id:</th>
+                <td>{{payment_obj.payment_id}}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{book_obj.email}}</td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td>{{book_obj.phone_number}}</td>
+            </tr>
+            <tr>
+                <th>Check In</th>
+                <td>{{book_obj.check_in}}</td>
+            </tr>
+            <tr>
+                <th>Check Out</th>
+                <td>{{book_obj.check_out}}</td>
+            </tr>
+            <tr>
+                <th>Guests</th>
+                <td>{{book_obj.guests}}</td>
+            </tr>
+            <tr>
+                <th>Room Type:</th>
+                <td>{{book_obj.room_type}}</td>
+            </tr>
+            <tr>
+                <th>Card Holder Name:</th>
+                <td>{{payment_obj.card_holder_name}}</td>
+            </tr>
+            <tr>
+                <th>Card Type:</th>
+                <td>{{payment_obj.card_type}}</td>
+            </tr>
+            <tr>
+                <th>Card Name:</th>
+                <td>{{payment_obj.card_name}}</td>
+            </tr>
+            <tr>
+                <th>Expiry Date</th>
+                <td>{{payment_obj.expiry_date}}</td>
+            </tr>
+            <tr>
+                <th>CVV:</th>
+                <td>{{payment_obj.cvv}}</td>
+            </tr>
+            <tr>
+                <th>Payment On:</th>
+                <td>{{payment_obj.payment_on}}</td>
+            </tr>
+
+        </table>
+    </div>
+    {% include 'UI/Footer.html' %}
+</body>
+</html>

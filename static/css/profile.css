@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.profile-container{
+    max-width: 80%;
+    margin: auto;
+    background-color: gainsboro;
+    padding: 1rem;
+}
+.profile-detail{
+    padding: 1rem;
+}
+.h1-tag{
+    text-align: center;
+    color:indigo;
+    text-transform: uppercase;
+}
+.table-tag{
+    width: 100%;
+}
+.table-tag th{
+    text-align: left;
+    padding: 0.5rem;
+}
+.table-tag td{
+    
+}
+.profile-history{
+    padding: 1rem;
+}

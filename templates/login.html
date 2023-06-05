@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/messages.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+</head>
+
+<body>
+    {% include 'UI/modal.html' %}
+    {% include "UI/Header.html" with active='login' %}
+    <div class="container">
+        <div class="box-login">
+            <h2>Login</h2>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="#" method="post">
+                {% csrf_token %}
+                <div class="box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input autocomplete="new-password" type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                  <label><input type="checkbox">Remember me</label>
+                  <a href="{% url 'forget-password' %}">Forgot Password</a>
+                </div>
+                <button type="submit" class="btn" name="btn">Login</button>
+                <div class="login-register">
+                    <p> Don't have an account? <a style="text-decoration: none;" href="{% url 'register' %}" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- <script src="login.js"></script> -->
+    <script src="{% static 'js/message.js'%}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+{% include 'UI/Footer.html' %}
+</body>
+
+</html>

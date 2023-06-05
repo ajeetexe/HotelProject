@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Serif:wght@700&family=Oleo+Script&family=Playfair+Display&display=swap");
+@import url("./header.css");
+@import url("./footer.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.headline {
+  font-size: calc(15px + 5vw);
+  line-height: 73px;
+  font-family: "Playfair Display";
+  color: #1a2c48;
+  text-transform: none;
+  display: inline-block;
+  margin: 0px;
+  text-align: center;
+  padding-bottom: 0.25em;
+}
+/* .page-title{
+  text-align: center;
+} */
+.headline-paragraph {
+  font-size: calc(15px + 1vw) !important;
+  line-height: 53px;
+  text-align: center;
+  font-family: "Playfair Display" !important;
+  color: #605356 !important;
+  text-transform: none !important;
+}
+.container {
+  padding: 30px 20px;
+  box-sizing: border-box;
+  max-width: 100%;
+  /* margin: 90px; */
+  margin-bottom: 0px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+
+/*content1*/
+.boxcontent {
+  display: flex;
+  background-color: #1a2c48;
+  padding: 80px 80px;
+  margin-top: 0px;
+}
+
+.boxcontent > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+.paragraph {
+  font-size: 16px;
+}
+.boxcontent2 {
+  display: flex;
+  background-color: #605356;
+  padding: 80px 80px;
+  margin-top: 0px;
+}
+
+.boxcontent2 > div {
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+.paragraph {
+  font-size: 16px;
+}
+.boxcontent3 {
+  display: flex;
+  background-color: #1a2c48;
+  padding: 80px 80px;
+  margin-top: 0px;
+}
+
+.boxcontent3 > div {
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+.paragraph {
+  font-size: 16px;
+}
+
+/*content1 end*/
+.boxcontent4 {
+  display: flex;
+  background-color: #605356;
+  padding: 80px 80px;
+  margin-top: 0px;
+}
+
+.boxcontent4 > div {
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+.paragraph {
+  font-size: 16px;
+}
+.contenta {
+  position: absolute;
+}
+.backgroundimg img{
+  max-inline-size: 100%;
+  block-size: 40rem;
+  aspect-ratio: 3/1;
+  object-fit: cover;
+}
+

@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}" />
+
+    <title>Hrooms.com</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Payment Details</h1>
+      <form method="post">
+        {% csrf_token %}
+        <div class="card-logos">
+          <img
+            class="card-logo"
+            src="{%static 'img/payment/p1.png' %}"
+            alt="Visa Logo"
+          />
+          <img
+            class="card-logo"
+            src="{%static 'img/payment/p2.png' %}"
+            alt="Mastercard Logo"
+          />
+          <img
+            class="card-logo"
+            src="{%static 'img/payment/p3.png' %}"
+            alt="amrican"
+          />
+          <img
+            class="card-logo"
+            src="{%static 'img/payment/p4.png' %}"
+            alt="discover"
+          />
+        </div>
+        <div class="form-group">
+          <label for="card-holder-name">Card Holder Name:</label>
+          <input
+            type="text"
+            id="card-holder-name"
+            name="card-holder-name"
+            placeholder="Card holder name"
+            required
+          />
+        </div>
+        
+        <div class="form-group">
+          <label for="card-type">Card Type:</label>
+          <select name="card-type" id="card-type" required>
+            <option value="">-----</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="card-number">Card Number:</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            placeholder="1234 5678 9012 3456"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="card-name">Card Name:</label>
+          <input
+            type="text"
+            id="card-name"
+            name="card-name"
+            placeholder="Card name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="expiry">Expiry Date:</label>
+          <input
+            type="text"
+            id="expiry"
+            name="expiry"
+            placeholder="MM/YY"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" placeholder="123" required />
+        </div>
+
+        <div class="checkbox-container">
+          <label>
+            <input type="checkbox" id="termsCheckbox" />
+            Notify Me About Special offers
+          </label>
+          <label>
+            <input type="checkbox" id="termsCheckbox" />
+            I have read and agree to the
+            <a href="{% url 'term-conditon' %}" target="_blank">terms and conditions</a>.
+          </label>
+        </div>
+        <div class="button-container">
+          <button id="payButton">Proceed to Payment</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

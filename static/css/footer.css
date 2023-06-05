@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Foldit:wght@100&display=swap");
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+@import url('./modal.css');
+/* *{
+    margin: 0;
+    padding: 0;
+    color: rgb(12, 10, 10);
+    box-sizing: border-box;
+    font-family: "playfair,display"
+} */
+footer {
+  /* position: relative;
+    bottom: 0px; */
+  margin-top: 1px;
+  max-width: 100%;
+  background: #1a2c48;
+  padding: 10px;
+}
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+/* .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+} */
+.left-box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.contact-content {
+  margin: 20px 10px 5px 10px;
+  padding: 1px;
+  line-height: 36px;
+}
+
+.left-box {
+  flex-grow: 1;
+}
+.center-box {
+  flex-grow: 1;
+}
+
+.right-box {
+  flex-grow: 1;
+}

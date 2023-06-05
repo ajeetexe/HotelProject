@@ -1,0 +1,28 @@
+{% load static %}
+<header>
+  <img
+    src="{% static 'img/logo/345.png' %}"
+    alt="logo"
+    width="128"
+    height="112"
+  />
+
+  <nav id="hamnav">
+    <label for="ham">&#9776;</label>
+    <input type="checkbox" id="ham" />
+    <div id="hamitems">
+      <a href="{% url 'index' %}" {% if active == 'index' %}class="active" {% endif %}>HOMES</a>
+      <a href="{% url 'about' %}" {% if active == 'about' %}class="active" {% endif %}>ABOUT</a>
+      <a href="{% url 'special-package' %}" {% if active == 'package' %}class="active" {% endif %}>SPECIALS & PACKEGES</a>
+      <a href="{% url 'restraunt' %}" {% if active == 'resta' %}class="active" {% endif %}>DINING</a>
+      <a href="{% url 'contact' %}" {% if active == 'contact' %}class="active" {% endif %}>CONTACT US</a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'profile' %}" {% if active == 'profile' %}class="active"{% endif %}>PROFILE</a>
+      <a href="{% url 'logout' %}">LOGOUT</a>
+      {% else %}
+      <a href="{% url 'register'%}" {% if active == 'register' %}class="active" {% endif %}>REGISTER</a>
+      <a href="{% url 'login' %}" {% if active == 'login' %}class="active" {% endif %}>LOGIN</a>
+      {% endif %}
+    </div>
+  </nav>
+</header>

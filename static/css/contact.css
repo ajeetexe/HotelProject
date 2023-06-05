@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Serif:wght@700&family=Oleo+Script&family=Playfair+Display&display=swap");
+@import url("./header.css");
+@import url("./footer.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "playfair,display";
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+
+.flex-container {
+  display: flex;
+  background-color: #1a2c48;
+  padding: 50px 50px;
+  /* flex-wrap: wrap; */
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 20px;
+  padding: 50px;
+  font-size: 30px;
+  margin-left: 45px;
+}
+img.attachment-full-size {
+  margin: 0px 0px 0px 10px;
+}
+a {
+  color: #9b804e;
+  font-size: 12px;
+}
+
+.texa-1-text {
+  color: #9b804e;
+  font-size: 24px;
+  font-family: "playfair,display";
+}
+
+.icon-wrapper {
+  margin-right: 20px;
+  padding: 0px;
+  text-align: center;
+}
+p {
+  font-size: 12px;
+  font-family: "playfair,display";
+}
+.icon-wrapper2 {
+  margin-right: 20px;
+  padding: 0px;
+  text-align: center;
+}
+.texa-2-text {
+  color: #9b804e;
+  font-size: 24px;
+  font-family: "playfair,display";
+}
+
+.mid-text-area {
+  color: black;
+  margin: 0px;
+  font-size: 20px;
+  font-family: "playfair,display";
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.2em;
+}
+.container {
+  background-color: rgb(182, 189, 162);
+  width: 100%;
+  height: auto;
+  padding: 30px 30px;
+  margin: 0px 0px 0px 0px;
+}
+.mess-subtitle {
+  color: rgb(15, 14, 31);
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-family: "playfair,display";
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.4em;
+}
+/*3nd end*/
+.box-container {
+  display: flex;
+  background-color: #595a68;
+  padding: 50px 50px;
+  /* flex-wrap: wrap; */
+}
+.box-container > div {
+  background-color: #f1f1f1;
+  margin: 20px;
+  padding: 50px;
+  font-size: 30px;
+}
+.imagebox {
+  margin: 0px 0px 0px 10px;
+  padding: 20px;
+}
+h4 {
+  color: #9b804e;
+  font-family: "playfair,display";
+}
+
+.contenta {
+  position: absolute;
+  top: 50%;
+  font-size: 60px;
+  font-family: "playfair,display";
+  margin: auto;
+  margin-left: 32%;
+  color: #9b804e;
+}
+
+@media screen and (max-width:768px) {
+  .flex-container{
+    flex-wrap: wrap;
+  }
+  .box-container{
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'UI/modal.html' %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+
+    <title>Hrooms.com</title>
+  </head>
+  <body>
+    {% include 'UI/Header.html' with active='contact' %}
+    <div class="backpic">
+      <img
+        alt=" contact"
+        src="{% static 'img/contact/image.png' %}"
+        style="width: 100%; height: 500px"
+      />
+      <h5 class="contenta">CONTACT US</h5>
+    </div>
+
+    <div class="flex-container">
+      <div class="icon-wrapper">
+        <a itemprop="url" href="mailto:Hroom@example.com" target="_blank">
+          <img
+            width="46"
+            height="48"
+            src="{% static 'img/contact/p1.png' %}"
+            class="attachment-full-size"
+            alt="d"
+          />
+          <div class="ta-1-content">
+            <h2 class="text-2-title" style="margin-top: 15px" align="center">
+              <a itemprop="url" href="Hroom@example.com" target="_blank">
+                <span class="texa-1-text">Hrooms@gmail.com</span>
+              </a>
+            </h2>
+            <p class="texta-passage" style="margin-top: 11px">
+              The company itself is very important, it will be followed by the
+              adpisc ding company, but it is the same thing that happens at the
+              same time
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="icon-wrapper2">
+        <a itemprop="url" href="tel:123456789" target="_blank">
+          <img
+            width="46"
+            height="48"
+            src="{% static 'img/contact/p2.png' %}"
+            class="attachment-full-size"
+            alt="d"
+          />
+          <div class="tha-1-content">
+            <h2 class="text-3-title" style="margin-top: 15px">
+              <a itemprop="url" href="tel:123456789" target="_blank"
+                ><span class="texa-2-text">Call us + 9184972849</span></a
+              >
+            </h2>
+            <p class="texta-passage" style="margin-top: 11px">
+              The company itself is very important, it will be followed by the
+              adpisc ding company, but it is the same thing that happens at the
+              same time.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="mid-text-area">
+      <div class="container">
+        <h2 class="mess-title" align="center">Ask before booking</h2>
+        <p class="mess-subtitle" style="margin-top: 19px" align="center">
+          Contact us anytime
+        </p>
+        <div class="elementor-widget-container">
+          <p
+            class="elementor-heading-title elementor-size-default"
+            text
+            align="center"
+          >
+            The pain itself is very important, it will be followed by the<br />
+            education of the patient, but at the same time they occur as a lot
+            of work and pain. <br />For to come to the smallest detail, no one
+            can exercise any kind of work except
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-container">
+      <div class="imagebox">
+        <figure class="imgboximg">
+          <img
+            width="100"
+            height="100"
+            src="{% static 'img/contact/img2.png' %}"
+            class="sankimg"
+            alt
+            loading="lazy"
+          />
+        </figure>
+        <div class="imgboxcontent">
+          <h4 class="imgboxtitle">Reception Always Open</h4>
+          <p class="imgboxdis">
+            The customer is very important, the customer will be followed by the
+            customer. As the land of the land, the mourning nor the corporal of
+            the land, the pillow of the lion.
+          </p>
+        </div>
+      </div>
+
+      <div class="imagebox2">
+        <figure class="imgboximg2">
+          <img
+            width="100"
+            height="100"
+            src="{% static 'img/contact/img2.png' %}"
+            class="sankimg"
+            alt
+            loading="lazy"
+          />
+        </figure>
+        <div class="imgboxcontent2">
+          <h4 class="imgboxtitle2">Online Reservation</h4>
+          <p class="imgboxdis2">
+            The customer is very important, the customer will be followed by the
+            customer. As the land of the land, the mourning nor the corporal of
+            the land, the pillow of the lion.
+          </p>
+        </div>
+      </div>
+    </div>
+    {% include 'UI/Footer.html' %}
+  </body>
+</html>

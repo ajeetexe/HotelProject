@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+    background-color: #1a2c48;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .card-logos {
+    margin-top: 10px;
+    
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-logo {
+    height: 35px;
+    margin: 0 16px;
+  }
+  .checkbox-container label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  .button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .button-container button:hover {
+    background-color: #45a049;
+  }  
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+    
+    
+  }

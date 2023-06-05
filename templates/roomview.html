@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/roomview.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <!-- <link rel="stylesheet" href="project.js"> -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    {% include 'UI/Header.html' %}
+    <h3 style="text-align:center;font-style:italic; background-color:gray;padding:1rem;color:white ">
+      You have <span style="color:springgreen;">{{room_obj.count}} room</span> available in different palaces.
+    </h3>
+    <div class="main-box-container">
+      {% for obj in room_obj %}
+      <div class="box-container">
+        <div class="box">
+          <img
+            src="{{obj.room_image.url}}"
+            alt=""
+            id="first"
+          />
+        </div>
+        <div class="content">
+          <h3><i class="bx bxs-map"></i>{{obj.city}}</h3>
+          <p>{{obj.room_detail}}</p>
+          {% if obj.star == '0' %}
+          <div class="stars">
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          {% elif obj.star == '0.5' %}
+          <div class="stars">
+            <i class="bx bxs-star-half"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          {% elif obj.star == '1' %}
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          {% elif obj.star == '1.5' %}
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          {% elif obj.star == '2' %}
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          {% elif obj.star == '2.5' %}
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          {% elif obj.star == '3' %}
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          {% elif obj.star == '3.5' %}
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          {% elif obj.star == '4' %}
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bx-star"></i>
+          </div>
+          {% elif obj.star == '4.5' %}
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+          </div>
+          {% elif obj.star == '5' %}
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          {% endif %}
+          <div class="price">&#8377;{{obj.room_price}} <span>&#8377;{{obj.room_price|add:200}}</span></div>
+          <a href="{% url 'booking' room_id=obj.pk checkin=checkin checkout=checkout %}" class="btn">Book Now</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% include 'UI/Footer.html' %}
+  </body>
+</html>

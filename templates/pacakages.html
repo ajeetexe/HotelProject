@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include 'UI/modal.html' %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/pacakges.css' %}" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {% include 'UI/Header.html' with active='package' %}
+    <!-- mid conent -->
+    <div class="content1">
+      <img src="{% static 'img/special/H12.jpg' %}" alt="image here" />
+    </div>
+    <div class="box-1">
+      <h1>HRooms Deals & Packages</h1>
+      <h2>ENHANCE YOUR TRIP WITH EXCLUSIVE SPECIALS​</h2>
+    </div>
+    <div class="input-box1">
+      <p>
+        Get the most out of your visit to Hrooms by taking advantage of our
+        hotel deals and travel packages. From warm, friendly service and
+        <br />contemporary amenities to a central location that makes it easy to
+        soak up Hrooms energy, cuisine, culture and attractions,Hrooms Hotel
+        offers an experience that stays with you long after you depart at a
+        value that will bring you back again very soon.
+      </p>
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="imgbx">
+          <h2>Afternoon Tea hotel Package</h2>
+          <p>
+            ​Traditional Afternoon Tea at the Pendray Tea House Breakfast &
+            Parking Included <br />
+            Flexible Cancellation Policy
+          </p>
+          <button onclick="nextPage()" class="submit-btn">Book Now</button>
+          <!-- <form action="">
+            <button type="submit" value="Submit" class="submit-btn">Book Now</button>
+          </form> -->
+          
+
+          <a href="{% url 'check' %}">
+            <img src="{% static 'img/special/breakfast.jpeg' %}" />
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbx">
+          <h2>Goa & Maharashtra State Resident Special</h2>
+          <p>
+            ​15% off Best Available Rate Breakfast & Parking Included Valid
+            until June 30th 2023 <br />
+            Flexible Cancellation Policy
+          </p>
+          <button onclick="nextPage()" class="submit-btn">Book Now</button>
+          
+          <a href="{% url 'check' %}">
+            <img src="{% static 'img/special/SP1.jpeg' %}" />
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbx">
+          <h2>Hrooms Hotel Senior Rate (65+)</h2>
+          <p>
+            10% off Best Available <br />Rate BreakfastIncluded <br />Flexible
+            Cancellation Policy
+          </p>
+          <button onclick="nextPage()" class="submit-btn">Book Now</button>
+          
+
+          <a href="{% url 'check' %}">
+            <img src="{% static 'img/special/senior1.jpeg' %}" />
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbx">
+          <h2>Gardens hotel Package</h2>
+          <p>
+            Tickets to Hrooms Gardens Breakfast & Parking Included <br />
+            Flexible Cancellation Policy
+          </p>
+          <button onclick="nextPage()" class="submit-btn">Book Now</button>
+          
+          <a href="{% url 'check' %}">
+            <img src="{% static 'img/special/garden.jpeg' %}" />
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbx">
+          <h2>Summer Vacation Pacakage</h2>
+          <p>
+            10% off Best Available Rate Breakfast Included​ <br />
+            ​Flexible Cancellation Policy
+          </p>
+          <button onclick="nextPage()" class="submit-btn">Book Now</button>
+          
+          <a href="{% url 'check' %}">
+            <img src="{% static 'img/special/hh1.jpeg' %}" />
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbx">
+          <h2>Pets are People Too hotel Package</h2>
+          <p>
+            Pet Welcome Gift & Organic Treats Breakfast & Parking Included
+            <br />
+            ​Flexible Cancellation Policy
+          </p>
+          <button onclick="nextPage()" class="submit-btn">Book Now</button>
+          
+          <a href="{% url 'check' %}">
+            <img src="{% static 'img/special/dog.jpeg' %}" />
+          </a>
+        </div>
+      </div>
+    </div>
+    {% include 'UI/Footer.html' %}
+    <script>
+      function nextPage(){
+        window.location.href="{% url 'check' %}"
+      }
+    </script>
+  </body>
+</html>

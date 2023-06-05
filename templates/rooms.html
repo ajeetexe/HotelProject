@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="brand">
+        <h1>Hrooms Gallery</h1>
+        <h4>VIEW OUR BRITISH COUNTRY MANOR BEFORE YOU BOOK​</h4>
+      </div>
+      <hr />
+      <div class="content">
+        <p>
+          Inspired by the first Canadian Pacific Hotels, the Huntingdon Manor
+          Hotel evokes the garden ambience and tranquillity of a British
+          country-style hotel. Manicured rose and topiary gardens, scenic ponds
+          and meandering cobblestone pathways create an ambience that feels
+          worlds apart from urban bustle and distractions, yet the hotel is
+          located in the heart of Victoria, BC, walking distance from downtown
+          and the Inner Harbour. Please view our image gallery to learn more.
+        </p>
+      </div>
+      <div class="menu-item">
+        <a href="{% url 'hotel' %}">The Hotel</a>
+        <a class="active" href="{% url 'rooms' %}">The Rooms</a>
+      </div>
+      <div id="image">
+        <img src="{% static 'img/gallery/room/r1.jpg' %}" alt="" id="img" />
+      </div>
+      <div id="image-control">
+        <a href="javascript:nextImage('img')">Next</a>
+        <a href="javascript:prevImage('img')">Previous</a>
+      </div>
+    </div>
+    
+    <script>
+      let imageArray = new Array();
+
+      imageArray[0] = new Image();
+      imageArray[0].src = "{% static 'img/gallery/room/r1.jpg' %}";
+
+      imageArray[1] = new Image();
+      imageArray[1].src = "{% static 'img/gallery/room/r2.jpg' %}";
+
+      imageArray[2] = new Image();
+      imageArray[2].src = "{% static 'img/gallery/room/r3.jpg' %}";
+
+      imageArray[3] = new Image();
+      imageArray[3].src = "{% static 'img/gallery/room/r4.jpg' %}";
+
+      imageArray[4] = new Image();
+      imageArray[4].src = "{% static 'img/gallery/room/r5.jpg' %}";
+
+      imageArray[5] = new Image();
+      imageArray[5].src = "{% static 'img/gallery/room/r6.jpg' %}";
+
+      imageArray[6] = new Image();
+      imageArray[6].src = "{% static 'img/gallery/room/r7.jpg' %}";
+
+      imageArray[7] = new Image();
+      imageArray[7].src = "{% static 'img/gallery/room/r8.jpg' %}";
+
+      imageArray[8] = new Image();
+      imageArray[8].src = "{% static 'img/gallery/room/r9.jpg' %}";
+
+      imageArray[9] = new Image();
+      imageArray[9].src = "{% static 'img/gallery/room/r10.jpg' %}";
+
+      imageArray[10] = new Image();
+      imageArray[10].src = "{% static 'img/gallery/room/r11.jpg' %}";
+
+      imageArray[11] = new Image();
+      imageArray[11].src = "{% static 'img/gallery/room/r12.jpg' %}";
+
+      imageArray[12] = new Image();
+      imageArray[12].src = "{% static 'img/gallery/room/r13.jpg' %}";
+
+      imageArray[13] = new Image();
+      imageArray[13].src = "{% static 'img/gallery/room/r14.jpg' %}";
+
+      imageArray[14] = new Image();
+      imageArray[14].src = "{% static 'img/gallery/room/r15.jpg' %}";
+
+      imageArray[15] = new Image();
+      imageArray[15].src = "{% static 'img/gallery/room/r16.jpg' %}";
+
+      imageArray[16] = new Image();
+      imageArray[16].src = "{% static 'img/gallery/room/r17.jpg' %}";
+
+      imageArray[17] = new Image();
+      imageArray[17].src = "{% static 'img/gallery/room/r18.jpg' %}";
+
+      imageArray[18] = new Image();
+      imageArray[18].src = "{% static 'img/gallery/room/r19.jpg' %}";
+
+      pos = 0;
+
+      function nextImage(element) {
+        let img = document.getElementById(element);
+        if (pos < imageArray.length) {
+          img.src = imageArray[pos].src;
+          pos = pos + 1;
+        } else {
+          pos = 0;
+          img.src = imageArray[pos].src;
+        }
+      }
+      function prevImage(element) {
+        let img = document.getElementById(element);
+        console.log(pos);
+        if (pos >= 0) {
+          img.src = imageArray[pos].src;
+          pos = pos - 1;
+        } else {
+          pos = imageArray.length - 1;
+          img.src = imageArray[pos].src;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+.messages{
+    list-style: none;
+    
+}
+.messages li{
+    color: white;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-radius: 2em;
+    /* animation: msg 5s normal; */
+    transition: 1s;
+    
+}
+.error{
+    background-color:crimson;
+    text-align: center;
+}
+
+.success{
+    background-color: #4bb453;
+    text-align: center;
+}
+
+/* @keyframes msg{
+    0%{opacity: 0;}
+    25%{opacity: 0.5;}
+    50%{opacity: 1;}
+    75%{opacity: 0.5;}
+    100%{opacity: 0;}
+} */

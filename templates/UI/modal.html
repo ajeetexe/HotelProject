@@ -1,0 +1,52 @@
+<div class="mail-query">
+  <button class="btn-query">
+    <i
+      class="bx bx-mail-send"
+      style="font-size: 30px; margin-right: 5px; color: rgb(232, 46, 46)"
+    ></i>
+  </button>
+</div>
+<div class="overlay"></div>
+<div class="mail-query-box">
+  <button class="close-btn">x</button>
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="mail-form">
+      <label for="full-name">Full name</label>
+      <input type="text" name="full-name" id="full-name" placeholder="Full name" required />
+    </div>
+    <div class="mail-form">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="email" required/>
+    </div>
+    <div class="mail-form">
+      <label for="msg">Message</label>
+      <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Your message here...." required></textarea>
+    </div>
+    <div class="mail-form">
+      <button type="submit" name="mail-query-btn">Send</button>
+    </div>
+  </form>
+</div>
+<script>
+  function showModal() {
+    document.querySelector(".overlay").classList.add("show-overlay");
+    document
+      .querySelector(".mail-query-box")
+      .classList.add("show-mail-query-box");
+      document.querySelector('.mail-query').classList.add('hide-mail-query')
+  }
+  function closeModal() {
+    document.querySelector(".overlay").classList.remove("show-overlay");
+    document
+      .querySelector(".mail-query-box")
+      .classList.remove("show-mail-query-box");
+      document.querySelector('.mail-query').classList.remove('hide-mail-query')
+  }
+
+  let btnQuery = document.querySelector(".btn-query");
+  btnQuery.addEventListener("click", showModal);
+
+  let btnClose = document.querySelector(".close-btn");
+  btnClose.addEventListener('click',closeModal)
+</script>

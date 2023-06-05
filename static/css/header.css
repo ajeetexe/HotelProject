@@ -1,0 +1,62 @@
+header {
+  /* position: fixed; */
+  /* top: 0%;
+    left: 0%; */
+  max-width: 100%;
+  padding: 1rem;
+  background: #1a2c48;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+nav a {
+  font-size: 1vw;
+  color: rgb(245, 242, 242);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+nav a:hover,
+nav a.active {
+  color: rgb(122, 218, 210);
+}
+.logo {
+  font-size: 18px;
+  color: white;
+}
+
+#hamnav label,
+#ham {
+  display: none;
+}
+@media screen and (max-width: 1100px) {
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    font-size: 2vw;
+    border-top: 1px solid #333;
+  }
+  #hamnav label {
+    display: inline-block;
+    color: #fff;
+    background-color: #1a2c48;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+  #hamitems {
+    display: none;
+  }
+  #hamnav input:checked ~ #hamitems {
+    display: block;
+  }
+}
+
+@media screen and(max-width:600px) {
+  #hamitems a {
+    font-size: 4vw;
+  }
+}

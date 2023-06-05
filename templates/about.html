@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    <title>Hrooms.com</title>
+  </head>
+  <body>
+    {% include 'UI/modal.html' %}
+    {% include 'UI/Header.html' with active='about' %}
+
+    <div class="aboutus-page">
+      <div class="container">
+        <h1 class="page-title">
+          <span class="headline">About Our Hrooms hotels</span>
+        </h1>
+        <span class="headline-paragraph"
+          >STAY ONCE, CARRY MEMORIES FOREVER</span
+        >
+      </div>
+    </div>
+
+    <div class="backgroundimg">
+      <img
+        src="{% static 'img/about/bg.jpg' %}"
+        alt=""
+      />
+    </div>
+
+    <div class="boxcontent">
+      <div class="boxdes">
+        <h2 class="wsite-content-title" style="text-align: center">
+          <font size="7" color="#637e18">2018</font>
+        </h2>
+        <div>
+          <div style="height: 17px; overflow: hidden; width: 100%"></div>
+          <hr class="styled-hr" style="width: 100%" />
+          <div style="height: 10px; overflow: hidden; width: 100%"></div>
+        </div>
+        <td class="" style="width: 81.526548672566%; padding: 0 30px">
+          <div class="paragraph">
+            <span
+              >Today, the iconic property is a much-loved scenic fixture on
+              Shitaburdi’s Inner Harbour landscape, offering a convenient and
+              comfortable resting place in Nagpur capital city..</span
+            >
+          </div>
+        </td>
+      </div>
+    </div>
+
+    <div class="boxcontent2">
+      <div class="boxdes2">
+        <h2 class="wsite-content-title2" style="text-align: center">
+          <font size="7" color="#637e18">2021</font>
+        </h2>
+        <div>
+          <div style="height: 17px; overflow: hidden; width: 100%"></div>
+          <hr class="styled-hr" style="width: 100%" />
+          <div style="height: 10px; overflow: hidden; width: 100%"></div>
+        </div>
+        <td class="" style="width: 81.526548672566%; padding: 0 30px">
+          <div class="paragraph">
+            <span
+              >In the 2005, the property was purchased and expanded with the
+              construction of the Hrooms Hotel,comfortable resting place in
+              Nagpur capital city styled after the first and finest Nagpur
+              Hotels.</span
+            >
+          </div>
+        </td>
+      </div>
+    </div>
+
+    <div class="boxcontent3">
+      <div class="boxdes3">
+        <h2 class="wsite-content-title3" style="text-align: center">
+          <font size="7" color="#637e18">2022</font>
+        </h2>
+        <div>
+          <div style="height: 17px; overflow: hidden; width: 100%"></div>
+          <hr class="styled-hr" style="width: 100%" />
+          <div style="height: 10px; overflow: hidden; width: 100%"></div>
+        </div>
+        <td class="" style="width: 81.526548672566%; padding: 0 30px">
+          <div class="paragraph">
+            <span
+              >Some of the earliest known hotels were referred to as inns, where
+              travellers rested and slept. , During the middle ages,comfortable
+              resting place in Nagpur, the churches across the world</span
+            >
+          </div>
+        </td>
+      </div>
+    </div>
+
+    <div class="boxcontent4">
+      <div class="boxdes4">
+        <h2 class="wsite-content-title4" style="text-align: center">
+          <font size="7" color="#637e18">2023</font>
+        </h2>
+        <div>
+          <div style="height: 17px; overflow: hidden; width: 100%"></div>
+          <hr class="styled-hr" style="width: 100%" />
+          <div style="height: 10px; overflow: hidden; width: 100%"></div>
+        </div>
+        <td class="" style="width: 81.526548672566%; padding: 0 30px">
+          <div class="paragraph">
+            <span
+              >Some of the earliest known hotels were referred to as inns, where
+              travellers rested and slept. , During the middle ages, the
+              churches across the world A business lounge which allows
+              executives to have private meals. The lounge provides the latest
+              newspapers and perhaps a library.</span
+            >
+          </div>
+        </td>
+      </div>
+    </div>
+
+    {% include 'UI/Footer.html' %}
+  </body>
+</html>

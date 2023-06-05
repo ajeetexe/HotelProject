@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: lightblue;
+        }
+        .container form{
+            background:indigo;
+            width: 400px;
+            padding: 2rem;
+            border-radius: 5px;
+        }
+        .book-form{
+            padding: 0.5rem;
+            
+        }
+        .book-form input{
+            width: 100%;
+            padding: 0.5rem;
+        }
+        .book-form label{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    {% include 'UI/Header.html' %}
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="book-form">
+              <label for="arival">Check In</label>
+              <input type="date" placeholder="Araival Date" name="arival" required>
+            </div>
+    
+            <div class="book-form">
+              <label for="departure">Check Out</label>
+              <input type="date" placeholder="Departure Date" name="departure" required>
+            </div>
+            <div class="book-form">
+              <br>
+              <input name="avail" type="submit" value="CHECK AVAILABILITY">
+            </div>
+          </form>
+    </div>
+    {% include 'UI/Footer.html' %}
+</body>
+</html>
